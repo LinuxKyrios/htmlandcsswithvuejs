@@ -14,6 +14,15 @@
         </tr>
       </tbody>
     </table>
+    <div class="form-group m-2">
+      <label>Maybe new tech stack?:</label>
+      <input v-model="newTechStack" class="form-control" />
+    </div>
+    <div class="text-center">
+      <button class="btn btn-info" v-on:click="addNewStack">
+        Add
+      </button>
+    </div>
   </div>
 </template>
 
@@ -27,7 +36,18 @@ export default {
               { action: "React", done: false },
               { action: "Angular", done: false },
               { action: ".NET Core MVC", done: false },
-              { action: "C#", done: false }]
+              { action: "C#", done: false }],
+      newTechStack: ""
+    }
+  },
+  //Method for adding possible new tech stack to learn
+  methods: {
+    addNewStack() {
+      this.stack.push({
+        action: this.newTechStack,
+        done: false
+      });
+      this.newTechStack = "";
     }
   }
 }
