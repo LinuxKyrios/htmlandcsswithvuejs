@@ -1,4 +1,6 @@
 # htmlandcsswithvuejs
+## Project status
+Project completed at 14.05.2021
 
 ## Project setup
 ```
